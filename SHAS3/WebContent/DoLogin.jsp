@@ -26,7 +26,8 @@
     {
       String sUserName=rsdoLogin.getString("firstname")+" "+rsdoLogin.getString("lastname");
      
-      session.setAttribute("sUserID",rsdoLogin.getString("firstname"));
+      session.setAttribute("sUserID",sUserName);
+      //session.setAttribute("sUserID",rsdoLogin.getString("firstname"));
 //       session.setAttribute("iUserType",rsdoLogin.getString("iUserType"));
 //       session.setAttribute("iUserLevel",rsdoLogin.getString("iUserLevel"));
 //       session.setAttribute("sUserName",sUserName);
