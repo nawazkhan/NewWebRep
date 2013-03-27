@@ -18,6 +18,7 @@
 <div>
 <input type="text" required="required" name="username" placeholder="Username">
 </div>
+
 <div>
 <input type="password" required="required" placeholder="Password" name="password">
 </div>
@@ -33,6 +34,12 @@
 </div>
 </form> <!-- form -->
 </section> <!-- content -->
+</div>
+<%if(session.getAttribute("error")=="0") 
+{%><div style="display: block; position: relative; font-size: 20px;
+font-family: Arial, Helvetica, sans-serif; top: 46px;
+text-align: center;
+color: red;"><%out.write("Username already exists");}%>
 </div>
 </body>
 </html>

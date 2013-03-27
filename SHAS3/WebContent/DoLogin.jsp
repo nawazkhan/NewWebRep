@@ -15,7 +15,6 @@
     
     try{
     String sqlOption="select * FROM Users where username='"+sUserID+"' and Password='"+sPassword+"'";
-    
     psdoLogin=conn.prepareStatement(sqlOption);
 //     psdoLogin.setString(1,sUserID);
 //     psdoLogin.setString(2,sPassword);
@@ -25,14 +24,13 @@
     if(rsdoLogin.next())
     {
       String sUserName=rsdoLogin.getString("firstname")+" "+rsdoLogin.getString("lastname");
-     
       session.setAttribute("sUserID",sUserName);
       //session.setAttribute("sUserID",rsdoLogin.getString("firstname"));
 //       session.setAttribute("iUserType",rsdoLogin.getString("iUserType"));
 //       session.setAttribute("iUserLevel",rsdoLogin.getString("iUserLevel"));
 //       session.setAttribute("sUserName",sUserName);
      
-      response.sendRedirect("success.jsp?error="+message);
+      response.sendRedirect("success.jsp?statusmsg="+message);
     }
     else
     {

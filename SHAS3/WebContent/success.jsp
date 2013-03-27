@@ -232,13 +232,15 @@ nav {
 	    section{
         position: relative;
         display: block;
+        top: 15px;
+        left: 18px;
         
         }
 
  #content
         {
             float: left;
-            width: 690px;
+            width: 350px;
         }
         
         article
@@ -254,7 +256,8 @@ nav {
             box-shadow: 0 1px 1px #999;
             -moz-border-radius:5px;
             -webkit-border-radius:5px;
-            border-radius:5px;            
+            border-radius:5px;  
+            height: 192px;          
         }
 		
 		button
@@ -282,16 +285,19 @@ nav {
   		#sprinkbtn
   		{
   			left: 65px;
+  			background-color: lightgreen;
   		}
   		
   		#thermobtn
   		{
   			left: 49px;
+  			background-color: ff3300;
   		}
   		
   		#lightbtn
   		{
   			left: 72px;
+  			background-color: ff3300;
   		}
   		.status
   		{
@@ -301,6 +307,22 @@ nav {
   			padding: 5px;
   		}
         
+        #devstatustab
+        {
+        	position: relative;
+        	background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 12%, #111111 51%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(12%,#4c4c4c), color-stop(51%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4c4c4c 12%,#111111 51%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4c4c4c 12%,#111111 51%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4c4c4c 12%,#111111 51%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4c4c4c 12%,#111111 51%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+width: 100%;
+height: 20px;
+color: white;
+text-align: center;
+        }
         
        </style>
 
@@ -313,14 +335,6 @@ if(session.getAttribute("sUserID") == null)
 <div id="header">
 <div id="logo">
 SHAS
-</div>
-<div id="topmenu">
-<ul>
-<li><a href="success.jsp">Home</a></li>
-<li><a href="#">Devices</a></li>
-<li><a href="#">Reports</a></li>
-<li><a href="#">Settings</a></li>
-</ul>
 </div>
 <div id="logout">
 <a href="LogoutPage.jsp">Logout</a>
@@ -340,7 +354,7 @@ out.print("Welcome! "+session.getAttribute("sUserID"));
                     <ul style="display: none;">                
                         <li><a href="#">Sprinkler</a></li>
                         <li><a href="#">Thermostat</a></li>
-                        <li><a href="#">Lighting</a></li>                      
+                        <li><a href="light.jsp">Lighting</a></li>                      
                     </ul>        
                 </li>
                 <li><a href="#">Usage Reports</a></li>
@@ -359,7 +373,6 @@ out.print("Welcome! "+session.getAttribute("sUserID"));
                 <button id="Thermobtn">OFF</button></div>
                 <div class="status">Lighting
                 <button id="Lightbtn">OFF</button></div>
-                
             </section>
             
         </article>        

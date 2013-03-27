@@ -51,5 +51,18 @@ width: 100%;
 </form> <!-- form -->
 </section> <!-- content -->
 </div>
+<%if(session.getAttribute("success")=="1")
+	{
+%>
+<div style="display:block; position: relative; font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+color: red; top: 94px;
+text-align: center;"><%out.write("Registration Successful!");
+	}
+session.removeAttribute("success");	
+session.invalidate();
+	%></div>
+	
+
 </body>
 </html>
