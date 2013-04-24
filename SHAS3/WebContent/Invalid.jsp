@@ -7,6 +7,14 @@
 <title>Invalid</title>
 </head>
 <body>
-You Need to Register as a User
+<div id="header">
+<div id="logo">
+SHAS
+</div>
+<div id="logout">
+<a href="LogoutPage.jsp">Logout</a>
+</div> <!-- end of logout div -->
+</div> <!-- end of header -->
+<div>Wrong Credentials</div>
 </body>
 </html>
