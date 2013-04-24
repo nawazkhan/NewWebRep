@@ -436,7 +436,7 @@ out.print(" "+session.getAttribute("sUserID"));
 </div>
 </div>
 <div id="notification">
-<div>Notification</div>
+<div style={position: relative; padding-bottom: 5px;}>Notification Box</div>
 </div>
 
 
